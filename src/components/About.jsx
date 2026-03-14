@@ -2,10 +2,12 @@ const About = () => {
     const skills = [
         { name: 'HTML', percentage: '90%' },
         { name: 'CSS', percentage: '90%' },
-        { name: 'React', percentage: '80%' },
-        { name: 'Node.js', percentage: '75%' },
-        { name: 'JavaScript', percentage: '85%' },
         { name: 'Tailwind CSS', percentage: '85%' },
+        { name: 'JavaScript', percentage: '85%' },
+        { name: 'React', percentage: '80%' },
+        { name: 'Node.js/Express JS', percentage: '50%' },
+        { name:'MongoDB', percentage:'50%'},
+        {name:'Git/GitHub',percentage:'60%'},
     ];
 
     return (
