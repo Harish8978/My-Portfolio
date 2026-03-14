@@ -8,6 +8,7 @@ const About = () => {
         { name: 'Node.js/Express JS', percentage: '50%' },
         { name:'MongoDB', percentage:'50%'},
         {name:'Git/GitHub',percentage:'60%'},
+        {name:'Java',percentage:"50%"},
     ];
 
     return (

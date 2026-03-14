@@ -12,7 +12,7 @@ const Resume = () => {
                 </p>
 
                 <a
-                    href="/resume.pdf"
+                    href="/Harish-Palani-Resume.pdf"
                     download="Harish_Palani_Resume.pdf"
                     className="inline-flex items-center px-8 py-4 bg-primary text-white font-bold rounded-lg transition-transform duration-300 hover:-translate-y-2 group"
                 >
