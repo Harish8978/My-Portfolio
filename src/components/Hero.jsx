@@ -8,7 +8,7 @@ const Hero = () => {
                         Hello, I'm <br className="hidden md:block" />
                         <span className="font-bold text-primary font-sans">Harish Palani</span>.
                         <br />
-                        <span className="text-2xl md:text-3xl lg:text-4xl mt-2 block opacity-90 font-sans uppercase tracking-[0.1em]">B.Tech Student & Developer</span>
+                        <span className="text-2xl md:text-3xl lg:text-4xl mt-2 block opacity-90 font-sans uppercase tracking-[0.1em]">B.Tech Student </span>
                     </h1>
 
                     <button
