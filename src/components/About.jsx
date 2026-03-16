@@ -1,52 +1,48 @@
 const About = () => {
     const skills = [
-        { name: 'HTML', percentage: '90%' },
-        { name: 'CSS', percentage: '90%' },
-        { name: 'Tailwind CSS', percentage: '85%' },
-        { name: 'JavaScript', percentage: '85%' },
-        { name: 'React', percentage: '80%' },
-        { name: 'Node.js/Express JS', percentage: '50%' },
-        { name:'MongoDB', percentage:'50%'},
-        {name:'Git/GitHub',percentage:'60%'},
-        {name:'Java',percentage:"50%"},
+        { name: 'HTML/CSS/JS', description: 'Experience building modern, responsive, and interactive user interfaces.', icon: '🌐' },
+        { name: 'REACT/MERN', description: 'Full stack development with focus on building scalable web applications.', icon: '⚛️' },
+        { name: 'TOOLS & JAVA', description: 'Proficient in Git, GitHub, and Core Java for problem solving.', icon: '⚙️' },
     ];
 
     return (
-        <section id="about" className="py-20 bg-accent/30">
-            <div className="container mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 relative inline-block left-1/2 -translate-x-1/2">
-                    ABOUT
-                    <div className="h-1 w-1/2 bg-primary mx-auto mt-2"></div>
-                </h2>
-
-                <div className="flex flex-col md:flex-row gap-12 items-start">
-                    <div className="md:w-1/2 space-y-6">
-                        <h3 className="text-2xl font-bold mb-4">Who am I?</h3>
-                        <p className="text-gray-300 leading-relaxed">
-                            I am a B-Tech Engineering Student from Panimalar Engineering College who is interested in
-                            Full Stack Web Development. So I Started Learning MERN Stack and i am in progress.
+        <section id="about" className="py-32 bg-black">
+            <div className="container mx-auto px-6 md:px-12">
+                {/* About Content */}
+                <div className="max-w-4xl mb-32 space-y-8">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter text-left">
+                        ABOUT <br className="hidden md:block" /> ME
+                    </h2>
+                    <div className="space-y-6 text-left">
+                        <p className="text-white/60 text-lg md:text-xl leading-relaxed">
+                            I am a B-Tech Engineering Student from Panimalar Engineering College who is interested in 
+                            Full Stack Web Development. I've been mastering the MERN Stack to build high-performance 
+                            web experiences that transport users through clean, scalable code.
                         </p>
-                        <p className="text-gray-300 leading-relaxed">
-                            I am a type of person who wants to learn and improve my knowledge and skills!
+                        <p className="text-white/60 text-lg md:text-xl leading-relaxed">
+                            I am a type of person who wants to constanty learn and improve my knowledge and skills, 
+                            pushing the boundaries of what's possible in web engineering.
                         </p>
                     </div>
+                </div>
 
-                    <div className="md:w-1/2 w-full space-y-6">
-                        {skills.map((skill) => (
-                            <div key={skill.name}>
-                                <div className="flex justify-between mb-2">
-                                    <span className="text-sm font-bold tracking-wider">{skill.name}</span>
-                                    <span className="text-sm text-gray-400">{skill.percentage}</span>
-                                </div>
-                                <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
-                                    <div
-                                        className="h-full bg-primary"
-                                        style={{ width: skill.percentage }}
-                                    ></div>
-                                </div>
+                {/* Skills/Features Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {skills.map((skill, index) => (
+                        <div key={index} className="glass-card p-10 rounded-lg group hover:bg-white/5 transition-all duration-500 flex flex-col gap-8">
+                            <div className="w-12 h-12 bg-white/5 flex items-center justify-center rounded-lg group-hover:bg-white group-hover:text-black transition-all">
+                                <span className="text-2xl">{skill.icon}</span>
                             </div>
-                        ))}
-                    </div>
+                            <div className="space-y-4">
+                                <h3 className="text-lg font-display font-bold uppercase tracking-tight leading-tight">
+                                    {skill.name}
+                                </h3>
+                                <p className="text-white/40 text-sm leading-relaxed">
+                                    {skill.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

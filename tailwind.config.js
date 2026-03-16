@@ -7,13 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#1a1a2e',
-        primary: '#e94560',
-        secondary: '#0f3460',
-        accent: '#16213e',
+        background: '#000000',
+        primary: {
+          DEFAULT: '#FFFFFF',
+          muted: '#888888',
+        },
+        secondary: '#0A0A0A',
+        accent: '#111111',
+        card: '#121212',
+        border: '#222222',
       },
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Michroma', 'sans-serif'],
       },
       keyframes: {
         slideUp: {
