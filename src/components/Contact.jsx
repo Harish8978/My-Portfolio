@@ -23,17 +23,10 @@ const Contact = () => {
                 e.target.reset();
                 setTimeout(() => setStatus(''), 5000);
             } else {
-                console.group("Web3Forms Submission Error");
-                console.error("Status:", res.status);
-                console.error("Data:", data);
-                console.groupEnd();
                 setStatus(data.message || 'SUBMISSION FAILED. PLEASE TRY AGAIN.');
             }
         } catch (error) {
-            console.group("Network/CORS Error Detail");
-            console.error("Error Message:", error.message);
-            console.error("Possible causes: Adblockers, DNS issues, or CORS restrictions in local environment.");
-            console.groupEnd();
+            console.error(error);
             setStatus('NETWORK ERROR. PLEASE CHECK CONNECTION.');
         }
     };
@@ -52,7 +45,6 @@ const Contact = () => {
                 </div>
 
                 <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
-                    <input type="hidden" name="access_key" value="0d2a537f-2041-4669-886b-9e7c627d21c6" />
                     <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,7 +85,7 @@ const Contact = () => {
                         <button
                             type="submit"
                             disabled={status === 'Sending...'}
-                            className="w-full md:w-auto px-12 py-5 bg-white text-black text-[12px] font-bold tracking-[0.2em] rounded-sm hover:bg-primary hover:text-white transition-all disabled:opacity-50"
+                            className="w-full md:w-auto px-12 py-5 bg-transparent border-2 border-white/80 text-white text-[12px] font-bold tracking-[0.2em] rounded-sm hover:bg-white hover:text-black transition-all duration-300 disabled:opacity-50"
                         >
                             {status === 'Sending...' ? 'CONNECTING...' : 'SEND MESSAGE →'}
                         </button>
