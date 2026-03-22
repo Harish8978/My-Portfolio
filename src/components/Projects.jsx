@@ -2,7 +2,7 @@ const Projects = () => {
     const projects = [
         {
             id: '01',
-            title: 'EV-Charge-Locatpr',
+            title: 'EV-Charge-Locator(Process)',
             techStack: ['React', 'Tailwind CSS', 'Express', 'MongoDB'],
             link: 'https://github.com/Harish8978/Ev-Charge_Locator'
         },
@@ -13,6 +13,7 @@ const Projects = () => {
             techStack: ['React', 'Tailwind CSS', 'FireBase'],
             link: 'https://github.com/Harish8978/Tution-Website'
         },
+        
        
     ];
 
