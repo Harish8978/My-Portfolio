@@ -2,9 +2,9 @@ const Projects = () => {
     const projects = [
         {
             id: '01',
-            title: 'E-waste-locator',
+            title: 'EV-Charge-Locatpr',
             techStack: ['React', 'Tailwind CSS', 'Express', 'MongoDB'],
-            link: 'https://github.com/Harish8978/E-Waste-Locator'
+            link: 'https://github.com/Harish8978/Ev-Charge_Locator'
         },
        
         {
